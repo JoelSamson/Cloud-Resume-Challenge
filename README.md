@@ -45,6 +45,17 @@ I've successfully deployed my HTML resume as a static website using Amazon S3. H
 
 5. Click through the remaining settings, keeping the defaults, and create the bucket.
 
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 23 50 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/f06eaeea-cb3c-4891-abfc-b4bbeba2e5de">
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 24 01 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/77ca0ead-b25d-4e6e-bcf0-af9f86d262aa">
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 24 05 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/096530f2-f125-4b95-960a-ff5c0b6b97d7">
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 24 10 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/c8ae08bf-7d48-4c8d-a1d6-3cd8d02d7e42">
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 24 13 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/a588378f-9c1f-4fea-baa6-d5e4eb9b55a2">
+
+   After creating we can see that our bucket is present in the list.
+
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 25 09 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/795253e5-106b-4634-b1ca-f843f7629920">
+
+
 ## Step 2: Upload HTML and CSS Files
 
 1. In your newly created bucket, click on the "Upload" button.
