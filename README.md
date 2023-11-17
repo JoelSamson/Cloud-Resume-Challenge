@@ -24,11 +24,57 @@ To enhance the visual appeal of my resume, I applied some styling using CSS. Whi
 Heres a view of the website till this point:
 <img width="1710" alt="Screenshot 2023-11-17 at 2 47 19 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/74e94e86-40ba-4614-8cf1-2eec01be339a">
 
-
 You can use my layout to personalise your website too.
+
+
+## Static website hosting
+
+# Deploying My Resume on Amazon S3
+
+I've successfully deployed my HTML resume as a static website using Amazon S3. Here's a brief guide on how I accomplished this:
+
+## Step 1: Set Up an Amazon S3 Bucket
+
+1. Go to the [Amazon S3 Console](https://console.aws.amazon.com/s3/).
+
+2. Click on "Create bucket."
+
+3. Provide a unique and meaningful name for your bucket, such as "your-name-resume-bucket."
+
+4. Choose the AWS region that is most suitable for you.
+
+5. Click through the remaining settings, keeping the defaults, and create the bucket.
+
+## Step 2: Upload HTML and CSS Files
+
+1. In your newly created bucket, click on the "Upload" button.
+
+2. Select and upload your HTML and CSS files. Ensure that your main HTML file is named something like "index.html" to serve as the default entry point.
+
+3. Once uploaded, make sure the files are set to public access. Select each file, go to the "Actions" dropdown, and click on "Make public."
+
+## Step 3: Enable Static Website Hosting
+
+1. In your S3 bucket, go to the "Properties" tab.
+
+2. Scroll down to the "Static website hosting" section.
+
+3. Click on "Edit."
+
+4. Choose "Use this bucket to host a website."
+
+5. Specify your main HTML file (e.g., "index.html") as the Index document.
+
+6. Click "Save changes."
+
+## Step 4: Access Your Website Endpoint
+
+1. In the "Static website hosting" section, note the "Endpoint" URL. This is the URL where your resume will be hosted.
+
+2. It may take a few minutes for the changes to propagate. Once done, you can visit the provided Endpoint URL in a web browser to view your deployed resume.
 
 ## Showcase Repository
 
-For a detailed look at my Cloud Resume Challenge submission, check out my [GitHub repository](https://github.com/your-username/cloud-resume-challenge). If you're considering taking on the challenge yourself, feel free to reach out for any insights or advice.
+For a detailed look at my deployment setup and to explore the deployed resume, check out my [GitHub repository](https://github.com/your-username/cloud-resume-challenge).
 
-Good luck with your Cloud Resume Challenge journey! 🚀
+Feel free to reach out if you have any questions or need assistance. Happy showcasing! 🌐✨
