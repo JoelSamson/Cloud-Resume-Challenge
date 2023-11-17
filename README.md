@@ -59,10 +59,32 @@ I've successfully deployed my HTML resume as a static website using Amazon S3. H
 ## Step 2: Upload HTML and CSS Files
 
 1. In your newly created bucket, click on the "Upload" button.
+   
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 31 28 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/b8cf1407-0b65-441a-8223-daaebe4e29d3">
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 31 36 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/0daa1f34-47b8-42ed-be99-6ab42f63d428">
+  
+
+
 
 2. Select and upload your HTML and CSS files. Ensure that your main HTML file is named something like "index.html" to serve as the default entry point.
 
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 31 53 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/10051560-a71d-48c3-87a6-19c338b7cbff">
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 32 08 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/ffa6fdaa-29c0-4689-97a1-c6e48478646a">
+
+
+
 3. Once uploaded, make sure the files are set to public access. Select each file, go to the "Actions" dropdown, and click on "Make public."
+
+   or
+
+   You can go to cloud front
+
+
+
+   
+
+
+
 
 ## Step 3: Enable Static Website Hosting
 
@@ -77,6 +99,11 @@ I've successfully deployed my HTML resume as a static website using Amazon S3. H
 5. Specify your main HTML file (e.g., "index.html") as the Index document.
 
 6. Click "Save changes."
+
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 36 43 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/8f2da306-41f5-4cee-9af9-feaecda348d3">
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 36 46 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/af869361-6697-4eea-85d9-9253d369284a">
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 36 52 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/6612be48-294f-4754-8ab9-d4ddfa71c25c">
+   <img width="1710" alt="Screenshot 2023-11-17 at 6 37 17 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/92fc5b9f-ec96-4ed0-b132-80973bf286a4">
 
 ## Step 4: Access Your Website Endpoint
 
