@@ -204,4 +204,84 @@ By copying the CloudFront distribution policy to your S3 bucket, you ensure that
 
 <img width="1710" alt="Screenshot 2023-11-19 at 3 15 36 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/8384b014-9b3b-4d6e-8eb1-26dba334a7bd">
 
+Certainly! Let's guide you through pointing a custom DNS domain name to your CloudFront distribution using Amazon Route 53:
+
+## DNS
+
+So for this step I have already bought a domain from Route 53 called joelcloud.com
+
+<img width="1710" alt="Screenshot 2023-11-19 at 3 30 21 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/3ebf9f6c-73c4-40a4-8a9d-6d42911400ca">
+
+<img width="1710" alt="Screenshot 2023-11-19 at 3 30 25 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/351418fd-116e-4107-97ae-4704b2a9b0ad">
+
+
+Great! If you already have a domain (e.g., joelcloud.com) registered in Amazon Route 53 and want to route traffic to it using CloudFront, here's how you can do it:
+
+## Step 1: Update CloudFront Distribution
+
+1. Go to the [Amazon CloudFront Console](https://console.aws.amazon.com/cloudfront/).
+
+2. Select the CloudFront distribution that you created for your resume.
+
+3. Click on the "Distribution Settings" tab.
+
+4. Under the "General" tab, Click edit settings
+
+   <img width="1710" alt="Screenshot 2023-11-19 at 3 43 09 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/e93e95fc-1041-4c0a-8ac9-78c204f43a85">
+
+   <img width="1710" alt="Screenshot 2023-11-19 at 3 38 03 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/1ba06050-24f6-45aa-86ab-c6a769fd3bec">
+
+5. Choose the option Alternative domain name and provide the domain name for our project it will be resume.joelcloud.com
+
+   <img width="1710" alt="Screenshot 2023-11-19 at 3 45 54 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/6130f79d-171a-4956-8282-c65a27020f76">
+   
+6.Under Custom SSL certificate - optional select Request Certificate.
+
+We get redirected to Amazon Certifcate mananger
+
+7. For certificate type select "Request Public Certificate"
+   
+   <img width="1710" alt="Screenshot 2023-11-19 at 3 49 22 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/5fdaec1b-5e42-4230-9127-2df7f31b52ad">
+   
+8. Under Domain name section . List the fully qualified domain name for us it will be "*.joelcloud.com"
+
+   <img width="1710" alt="Screenshot 2023-11-19 at 3 39 15 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/04920bb3-77a3-4d08-a098-e22f0a01f7dc">
+   
+9. We add a tag
+
+<img width="1710" alt="Screenshot 2023-11-19 at 3 39 17 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/265e6151-3abb-47bd-be90-c609e912576c">
+
+10. Now we have to wait till the certificate validates for us to continue further
+    
+    <img width="1710" alt="Screenshot 2023-11-19 at 3 39 17 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/bb68549f-6a20-408f-8889-ee9f74abd0ae">
+
+
+
+
+   
+
+
+## Step 8: Update Domain Registrar Settings
+
+1. Go to the website of your domain registrar where you registered joelcloud.com.
+
+2. Locate the DNS settings or domain management section.
+
+3. Update the domain's nameservers to the ones provided by Amazon Route 53 if not already done.
+
+4. Save the changes.
+
+## Step 9: Verify Domain Configuration
+
+1. It may take some time for the DNS changes to propagate.
+
+2. After the changes have propagated, you should be able to access your resume using your custom domain (e.g., https://joelcloud.com).
+
+3. Ensure that the connection is secure and that HTTPS is enabled.
+
+Congratulations! Your resume is now accessible with your custom domain and secured with HTTPS. Feel free to reach out if you have any questions or need further assistance.
+
+## Showcase Repository
+
+For a detailed look at my DNS configuration and custom domain setup, check out my [GitHub repository](https://github.com/your-username/cloud-resume-challenge).
 
