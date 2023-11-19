@@ -80,13 +80,7 @@ I've successfully deployed my HTML resume as a static website using Amazon S3. H
    You can go to cloud front
 
 
-
-   
-
-
-
-
-## Step 3: Enable Static Website Hosting
+## Step 3: Enable Static Website Hosting (Doesnt need to be done)
 
 1. In your S3 bucket, go to the "Properties" tab.
 
@@ -109,10 +103,105 @@ I've successfully deployed my HTML resume as a static website using Amazon S3. H
 
 1. In the "Static website hosting" section, note the "Endpoint" URL. This is the URL where your resume will be hosted.
 
+   <img width="1710" alt="Screenshot 2023-11-19 at 2 42 42 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/2be687e6-ec87-46e4-9ba5-5233b23a180b">
+
+
 2. It may take a few minutes for the changes to propagate. Once done, you can visit the provided Endpoint URL in a web browser to view your deployed resume.
 
-## Showcase Repository
+   <img width="1710" alt="Screenshot 2023-11-19 at 2 42 37 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/efd5f1f5-2de7-48aa-a2a0-c677493e5fe2">
 
-For a detailed look at my deployment setup and to explore the deployed resume, check out my [GitHub repository](https://github.com/your-username/cloud-resume-challenge).
+   Try to access it — you’ll see an error come up. Why are we getting this error? Because public access has been disabled. Don’t worry, we’ll be fixing it soon Using Cloud front.
 
-Feel free to reach out if you have any questions or need assistance. Happy showcasing! 🌐✨
+
+# HTTPS
+
+Here we want to create an Amazon CloudFront distribution and leverage the settings to enable HTTPS. Additionally, we copy the CloudFront distribution policy and apply it to the S3 bucket hosting the resume. Here's a guide on how to achieve this:
+
+## Step 1: Create Amazon CloudFront Distribution with HTTPS
+
+1. Go to the [Amazon CloudFront Console](https://console.aws.amazon.com/cloudfront/).
+
+2. Click on "Create Distribution."
+
+<img width="1710" alt="Screenshot 2023-11-19 at 2 11 14 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/80cc6881-701d-41b6-af25-3b8cd05ef9cd">
+
+
+3. In the "Origin Setting" section, choose your S3 bucket as the "Origin Domain Name. Ours is joel-cloud-resume-challenge.s3.us-east-1.amazonaws.com
+
+4. Select "Origin accessInfo" as Origin access control settings (recommended)
+                                 Bucket can restrict access to only CloudFront.
+   
+<img width="1710" alt="Screenshot 2023-11-19 at 2 26 44 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/c90a391d-8bdd-48d9-ac86-f2579ae0549f">
+
+5.Origin acesss control should be selected here we create a origin Acess control as follows
+
+<img width="1710" alt="Screenshot 2023-11-19 at 3 02 06 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/0c528e28-396a-46f7-b7e1-3cb6a1d5eab3">
+
+6. Under default cache Behaviour we select for the setting
+                        Viewer protocol policy
+                        HTTPS only
+
+<img width="1710" alt="Screenshot 2023-11-19 at 2 26 51 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/72e36379-b100-4db9-b402-d182ce33b16e">
+
+7. Do not enable WAF
+
+   <img width="1710" alt="Screenshot 2023-11-19 at 2 26 54 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/c5941995-f461-4f63-88b4-657184f754cd">
+   <img width="1710" alt="Screenshot 2023-11-19 at 2 26 57 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/696851b8-8512-478b-aa92-d3e37f4efb76">
+
+   
+8. Leave other settings as normal, and then click on "Create Distribution."
+
+   <img width="1710" alt="Screenshot 2023-11-19 at 2 26 59 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/283f1d88-d5c3-4342-a1b8-faee962d0af2">
+
+   <img width="1710" alt="Screenshot 2023-11-19 at 2 27 16 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/bf84e4f8-1ab8-4bb5-8f93-eada65ecf303">
+
+7. Once the distribution is created, note down the CloudFront domain name.
+
+## Step 2: Copy CloudFront Distribution Policy
+
+1. In the CloudFront Console, navigate to the distribution you created.
+
+2. In the distribution settings, find and click on the "Distribution Settings" tab.
+
+3. Scroll down to the "Access Control" section.
+
+4. Click on "Edit" next to "Bucket Policy."
+
+5. Copy the existing bucket policy.
+
+   
+
+## Step 3: Apply CloudFront Policy to S3 Bucket
+
+1. Go to the [Amazon S3 Console](https://console.aws.amazon.com/s3/).
+
+2. Navigate to the bucket hosting your resume.
+
+3. In the bucket settings, go to the "Permissions" tab.
+
+4. Click on "Bucket Policy."
+
+5. Paste the CloudFront distribution policy you copied earlier.
+
+6. Save the changes.
+
+   <img width="1710" alt="Screenshot 2023-11-19 at 2 28 22 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/b7337687-9408-449f-be16-3263eaa62afe">
+   
+   <img width="1710" alt="Screenshot 2023-11-19 at 2 28 09 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/efa2fa8f-8d5e-47ce-9f76-12887c6017c1">
+
+## Step 4: Test the Resume Access with HTTPS
+
+1. After the changes have propagated, access your resume using the CloudFront domain (e.g., `https://drlwn5w8rddjn.cloudfront.net`).
+
+<img width="1710" alt="Screenshot 2023-11-19 at 2 32 56 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/01c1e99b-8864-4aa3-8012-393a8276091f">
+
+
+<img width="1710" alt="Screenshot 2023-11-19 at 2 32 49 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/2c3574a6-0287-4fb1-91dd-e255d004aa7a">
+
+2. Ensure that the connection is secure and that HTTPS is enabled.
+
+By copying the CloudFront distribution policy to your S3 bucket, you ensure that the security settings configured for CloudFront are applied to the S3 bucket as well.
+
+<img width="1710" alt="Screenshot 2023-11-19 at 3 15 36 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/8384b014-9b3b-4d6e-8eb1-26dba334a7bd">
+
+
