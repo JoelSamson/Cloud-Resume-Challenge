@@ -255,33 +255,39 @@ We get redirected to Amazon Certifcate mananger
     
     <img width="1710" alt="Screenshot 2023-11-19 at 3 39 17 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/bb68549f-6a20-408f-8889-ee9f74abd0ae">
 
+   <img width="1710" alt="Screenshot 2023-11-20 at 12 15 12 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/dd953994-991e-4dc3-ada3-0e2eaf41c398">
+
+11. Now go back to the editing the cloud front destribution and select the Custom SSL certficate that has just been issued in the previous step
+
+    <img width="1710" alt="Screenshot 2023-11-20 at 12 19 54 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/5603e6f6-b214-45f9-86e6-55d3df1bcb79">
+12. Leave all the other settings to default and save changes
+    <img width="1710" alt="Screenshot 2023-11-20 at 12 19 58 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/0b521533-125f-408e-9fad-1915ce74125f">
+
+13. Wsit till it gets deployed
+
+<img width="1710" alt="Screenshot 2023-11-20 at 12 21 40 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/4d2a892c-a464-40f4-8232-495126b928a6">
+
+## Step 2: Creating a record for our resume.joelcloud.com
+1. Go to Create Record in Your Hosted zone "joelcloud.com" in Route 53 and select create record
+
+2.Now select Record type as A as we are routing to a AWS Service
+
+3. Select The Alias Option
+
+4. Under Choose endpoint select Route traffic to "Alias to Cloud Distribution"
+
+5. Select our cloud distribution
+
+6. Create Record
+<img width="1710" alt="Screenshot 2023-11-20 at 12 26 31 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/41c126e6-b537-4dc0-9b0a-8e1a7d0b2337">
+
+NOW VISIT THE URL resume.joelcloud.com
+
+<img width="1710" alt="Screenshot 2023-11-20 at 12 31 21 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/c826b3a9-2e86-4555-9d6b-a28c022c13ea">
+
+<img width="1710" alt="Screenshot 2023-11-20 at 12 30 57 PM" src="https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/9fe083ba-7b48-4e9a-8ca5-7117267caff2">
+
+We have successfully done steps 1 to 6 in the Cloud Resume Challeange
 
 
-
-   
-
-
-## Step 8: Update Domain Registrar Settings
-
-1. Go to the website of your domain registrar where you registered joelcloud.com.
-
-2. Locate the DNS settings or domain management section.
-
-3. Update the domain's nameservers to the ones provided by Amazon Route 53 if not already done.
-
-4. Save the changes.
-
-## Step 9: Verify Domain Configuration
-
-1. It may take some time for the DNS changes to propagate.
-
-2. After the changes have propagated, you should be able to access your resume using your custom domain (e.g., https://joelcloud.com).
-
-3. Ensure that the connection is secure and that HTTPS is enabled.
-
-Congratulations! Your resume is now accessible with your custom domain and secured with HTTPS. Feel free to reach out if you have any questions or need further assistance.
-
-## Showcase Repository
-
-For a detailed look at my DNS configuration and custom domain setup, check out my [GitHub repository](https://github.com/your-username/cloud-resume-challenge).
 
