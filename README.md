@@ -32,6 +32,10 @@ To ensure reproducibility and scalability, the project utilizes Infrastructure a
 - **Python**: Used for Lambda functions and server-side scripting.
 - **AWS CloudFormation**: YAML/JSON templates for defining infrastructure.
 
+## Check out the Website
+
+Visit [resume.joelcloud.com](https://resume.joelcloud.com) to see the live version of my cloud-based resume!
+
 ## Getting Started
 
 1. Files for some steps are present
@@ -45,3 +49,15 @@ Feel free to explore each service's folder for detailed implementation and confi
 If you have suggestions or improvements, feel free to open an issue or submit a pull request. Let's make this project even better together!
 
 Thank you for checking out my Cloud Resume Challenge project! 😊
+
+Visit [resume.joelcloud.com](https://resume.joelcloud.com) to see the live version of my cloud-based resume!
+
+## Contribution
+
+If you have suggestions or improvements, feel free to open an issue or submit a pull request. Let's make this project even better together!
+
+Thank you for checking out my Cloud Resume Challenge project! 😊
+
+---
+
+**Note**: This README intentionally omits specific setup steps as they are provided within each service's respective directory.
