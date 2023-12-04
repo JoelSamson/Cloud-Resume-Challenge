@@ -32,6 +32,10 @@ To ensure reproducibility and scalability, the project utilizes Infrastructure a
 - **Python**: Used for Lambda functions and server-side scripting.
 - **AWS CloudFormation**: YAML/JSON templates for defining infrastructure.
 
+## Implementation
+
+![IMG_0521](https://github.com/JoelSamson/Cloud-Resume-Challenge/assets/55976489/790cbde3-2eea-4105-a202-7606389ffd4b)
+
 ## Check out the Website
 
 Visit [resume.joelcloud.com](https://resume.joelcloud.com) to see the live version of my cloud-based resume!
