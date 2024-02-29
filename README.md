@@ -31,6 +31,11 @@ To ensure reproducibility and scalability, the project utilizes Infrastructure a
 - **HTML/CSS/JavaScript**: Front-end development for the resume website.
 - **Python**: Used for Lambda functions and server-side scripting.
 - **AWS CloudFormation**: YAML/JSON templates for defining infrastructure.
+- **Terraform**: Infrastructure as Code tool for managing cloud resources.
+
+## CI/CD Implementation
+
+For continuous integration and deployment (CI/CD), GitHub Actions is utilized. A YAML file (`front-endCICD.yaml`) in the repository defines the CI/CD workflow, automating the build, test, and deployment processes.
 
 ## Implementation
 
@@ -53,15 +58,3 @@ Feel free to explore each service's folder for detailed implementation and confi
 If you have suggestions or improvements, feel free to open an issue or submit a pull request. Let's make this project even better together!
 
 Thank you for checking out my Cloud Resume Challenge project! 😊
-
-Visit [resume.joelcloud.com](https://resume.joelcloud.com) to see the live version of my cloud-based resume!
-
-## Contribution
-
-If you have suggestions or improvements, feel free to open an issue or submit a pull request. Let's make this project even better together!
-
-Thank you for checking out my Cloud Resume Challenge project! 😊
-
----
-
-**Note**: This README intentionally omits specific setup steps as they are provided within each service's respective directory.
